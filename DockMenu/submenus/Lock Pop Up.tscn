@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="Control" type="ConfirmationDialog"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.929
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer"]
+margin_left = 360.0
+margin_top = 271.0
+margin_right = 663.0
+margin_bottom = 285.0
+text = "Are You Sure You would like to unlock the map?"
+align = 1
+valign = 1

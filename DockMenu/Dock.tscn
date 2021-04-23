@@ -1,0 +1,213 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/2DMapGenerator/DockMenu/submenus/Lock Pop Up.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/2DMapGenerator/DockMenu/Menu.gd" type="Script" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Map Noise Settings" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -742.0
+margin_bottom = -344.0
+rect_min_size = Vector2( 128, 256 )
+theme = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+margin_right = 319.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="HSplitContainer"]
+margin_top = 5.0
+margin_right = 70.0
+margin_bottom = 19.0
+text = "Node Path:"
+
+[node name="PathInput" type="LineEdit" parent="HSplitContainer"]
+margin_left = 82.0
+margin_right = 319.0
+margin_bottom = 24.0
+align = 2
+placeholder_text = "res://..."
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="."]
+margin_top = 28.0
+margin_right = 319.0
+margin_bottom = 52.0
+
+[node name="Label" type="Label" parent="HSplitContainer2"]
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "Seed"
+
+[node name="SeedEdit" type="LineEdit" parent="HSplitContainer2"]
+margin_left = 43.0
+margin_right = 319.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 18 )
+text = "1"
+align = 2
+
+[node name="HSplitContainer3" type="HSplitContainer" parent="."]
+margin_top = 56.0
+margin_right = 319.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="HSplitContainer3"]
+margin_top = 5.0
+margin_right = 52.0
+margin_bottom = 19.0
+text = "Octaves"
+
+[node name="OctavesEdit" type="LineEdit" parent="HSplitContainer3"]
+margin_left = 64.0
+margin_right = 319.0
+margin_bottom = 24.0
+text = "3"
+align = 2
+
+[node name="HSplitContainer4" type="HSplitContainer" parent="."]
+margin_top = 84.0
+margin_right = 319.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="HSplitContainer4"]
+margin_top = 5.0
+margin_right = 41.0
+margin_bottom = 19.0
+text = "Period"
+
+[node name="PeriodEdit" type="LineEdit" parent="HSplitContainer4"]
+margin_left = 53.0
+margin_right = 319.0
+margin_bottom = 24.0
+text = "64"
+align = 2
+
+[node name="HSplitContainer5" type="HSplitContainer" parent="."]
+margin_top = 112.0
+margin_right = 319.0
+margin_bottom = 136.0
+
+[node name="Label" type="Label" parent="HSplitContainer5"]
+margin_top = 5.0
+margin_right = 75.0
+margin_bottom = 19.0
+text = "Persistence"
+
+[node name="PeristenceEdit" type="LineEdit" parent="HSplitContainer5"]
+margin_left = 87.0
+margin_right = 319.0
+margin_bottom = 24.0
+text = "0.5"
+align = 2
+
+[node name="HSplitContainer6" type="HSplitContainer" parent="."]
+margin_top = 140.0
+margin_right = 319.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="HSplitContainer6"]
+margin_top = 5.0
+margin_right = 65.0
+margin_bottom = 19.0
+text = "Lacunarity"
+
+[node name="LacunarityEdit" type="LineEdit" parent="HSplitContainer6"]
+margin_left = 77.0
+margin_right = 319.0
+margin_bottom = 24.0
+text = "2"
+align = 2
+
+[node name="Generate" type="Button" parent="."]
+margin_top = 168.0
+margin_right = 319.0
+margin_bottom = 188.0
+text = "Generate Map"
+
+[node name="HSplitContainer7" type="HSplitContainer" parent="."]
+margin_top = 192.0
+margin_right = 319.0
+margin_bottom = 234.0
+
+[node name="Label" type="Label" parent="HSplitContainer7"]
+margin_top = 14.0
+margin_right = 61.0
+margin_bottom = 28.0
+text = "Sea-Level"
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="HSplitContainer7"]
+margin_left = 73.0
+margin_right = 319.0
+margin_bottom = 42.0
+
+[node name="SeaSlider" type="HSlider" parent="HSplitContainer7/VSplitContainer2"]
+margin_right = 246.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.01
+
+[node name="SeaLabel" type="Label" parent="HSplitContainer7/VSplitContainer2"]
+margin_top = 28.0
+margin_right = 246.0
+margin_bottom = 42.0
+align = 2
+
+[node name="HSplitContainer8" type="HSplitContainer" parent="."]
+margin_top = 238.0
+margin_right = 319.0
+margin_bottom = 280.0
+
+[node name="Label" type="Label" parent="HSplitContainer8"]
+margin_top = 14.0
+margin_right = 106.0
+margin_bottom = 28.0
+text = "Beach-Tolerance"
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer8"]
+margin_left = 118.0
+margin_right = 319.0
+margin_bottom = 42.0
+
+[node name="BeachSlider" type="HSlider" parent="HSplitContainer8/VSplitContainer"]
+margin_right = 201.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.01
+
+[node name="BeachLabel" type="Label" parent="HSplitContainer8/VSplitContainer"]
+margin_top = 28.0
+margin_right = 201.0
+margin_bottom = 42.0
+align = 2
+
+[node name="Button" type="Button" parent="."]
+margin_top = 284.0
+margin_right = 319.0
+margin_bottom = 304.0
+text = "LOCK"
+
+[node name="lockConfirm" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 308.0
+margin_right = 319.0
+margin_bottom = 378.0
+[connection signal="text_changed" from="HSplitContainer/PathInput" to="." method="_on_PathInput_text_changed"]
+[connection signal="text_changed" from="HSplitContainer2/SeedEdit" to="." method="_on_SeedEdit_text_changed"]
+[connection signal="text_entered" from="HSplitContainer2/SeedEdit" to="." method="_on_SeedEdit_text_entered"]
+[connection signal="text_changed" from="HSplitContainer3/OctavesEdit" to="." method="_on_OctavesEdit_text_changed"]
+[connection signal="text_changed" from="HSplitContainer4/PeriodEdit" to="." method="_on_PeriodEdit_text_changed"]
+[connection signal="text_changed" from="HSplitContainer5/PeristenceEdit" to="." method="_on_PeristenceEdit_text_changed"]
+[connection signal="text_changed" from="HSplitContainer6/LacunarityEdit" to="." method="_on_LacunarityEdit_text_changed"]
+[connection signal="pressed" from="Generate" to="." method="_on_Generate_pressed"]
+[connection signal="value_changed" from="HSplitContainer7/VSplitContainer2/SeaSlider" to="." method="_on_SeaSlider_value_changed"]
+[connection signal="value_changed" from="HSplitContainer8/VSplitContainer/BeachSlider" to="." method="_on_BeachSlider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="confirmed" from="lockConfirm" to="." method="_on_lockConfirm_confirmed"]
