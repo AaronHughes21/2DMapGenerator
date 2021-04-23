@@ -29,15 +29,16 @@ func _ready():
 	pass # Replace with function body.
 
 func update_cells():
-	for x in range(size):
-		for y in range(size):
-			n = island(x,y)
-			if n > sea_level:
-				set_cell(x,y,0)
-			elif n >(sea_level - beach_size):
-				set_cell(x,y,2)
-			else:
-				set_cell(x,y,1)
+	if(!locked):
+		for x in range(size):
+			for y in range(size):
+				n = island(x,y)
+				if n > sea_level:
+					set_cell(x,y,0)
+				elif n >(sea_level - beach_size):
+					set_cell(x,y,2)
+				else:
+					set_cell(x,y,1)
 
 func island(x:float,y:float):
 	var disX = float(abs(x - size * 0.5))
